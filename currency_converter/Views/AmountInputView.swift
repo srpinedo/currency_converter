@@ -12,6 +12,7 @@ struct AmountInputView: View {
     let currencyCode: String
     let onAmountSet: (String) -> Void
     let onAmountClear: () -> Void
+    @EnvironmentObject var localizationManager: LocalizationManager
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {

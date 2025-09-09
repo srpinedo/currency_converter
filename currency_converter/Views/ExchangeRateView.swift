@@ -10,6 +10,7 @@ import SwiftUI
 struct ExchangeRateView: View {
     let exchangeRateText: String
     let resultText: String
+    @EnvironmentObject var localizationManager: LocalizationManager
     
     var body: some View {
         VStack(spacing: 20) {
@@ -45,6 +46,7 @@ struct ExchangeRateView: View {
 struct UpdateButtonView: View {
     let isLoading: Bool
     let onUpdate: () -> Void
+    @EnvironmentObject var localizationManager: LocalizationManager
     
     var body: some View {
         Button(action: onUpdate) {

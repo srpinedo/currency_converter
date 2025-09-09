@@ -40,6 +40,7 @@ struct ContentView: View {
                         toCurrency: $viewModel.toCurrency,
                         onSwap: viewModel.swapCurrencies
                     )
+                    .environmentObject(localizationManager)
                     
                     AmountInputView(
                         amount: $viewModel.amount,
@@ -47,6 +48,7 @@ struct ContentView: View {
                         onAmountSet: viewModel.setAmount,
                         onAmountClear: viewModel.clearAmount
                     )
+                    .environmentObject(localizationManager)
                     
                     QuickAmountButtonsView { value in
                         viewModel.setAmount(value)
@@ -56,11 +58,13 @@ struct ContentView: View {
                         exchangeRateText: viewModel.exchangeRateText,
                         resultText: viewModel.resultText
                     )
+                    .environmentObject(localizationManager)
                     
                     UpdateButtonView(
                         isLoading: viewModel.isLoading,
                         onUpdate: viewModel.updateExchangeRate
                     )
+                    .environmentObject(localizationManager)
                     
                     Text("source".localized())
                         .font(.caption2)
@@ -84,6 +88,7 @@ struct ContentView: View {
             viewModel.updateExchangeRate()
         }
         .onChange(of: localizationManager.currentLanguage) { _ in
+            viewModel.objectWillChange.send()
         }
     }
 }

@@ -12,6 +12,7 @@ struct CurrencySelectionView: View {
     @Binding var toCurrency: Currency
     @State private var showingFromPicker = false
     @State private var showingToPicker = false
+    @EnvironmentObject var localizationManager: LocalizationManager
     
     let onSwap: () -> Void
     
