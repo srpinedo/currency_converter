@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings (English)
+  currency_converter
+
+  Created by Joan Pinedo on 8/09/25.
+*/
+
+// MARK: - App Title
+"app_title" = "Currency Converter";
+
+// MARK: - Currency Selection
+"from_label" = "From";
+"to_label" = "To";
+"select_currency_origin" = "Select origin currency";
+"select_currency_destination" = "Select destination currency";
+
+// MARK: - Amount Input
+"amount_label" = "Amount (%@)";
+"quick_amount_10" = "10";
+"quick_amount_50" = "50";
+"quick_amount_100" = "100";
+
+// MARK: - Exchange Rate
+"current_rate" = "Current rate";
+"result" = "Result";
+
+// MARK: - Buttons
+"update_rate" = "Update rate";
+"close" = "Close";
+"swap_currencies" = "Swap currencies";
+
+// MARK: - Source
+"source" = "Source: exchangerate-api.com";
+
+// MARK: - Language
+"language" = "Language";
+"english" = "English";
+"spanish" = "Spanish";
